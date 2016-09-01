@@ -1,0 +1,410 @@
+/*
+
+RESPONSTABLE 2.0 by jordyvanraaij
+  Designed mobile first!
+
+If you like this solution, you might also want to check out the 1.0 version:
+  https://gist.github.com/jordyvanraaij/9069194
+
+*/
+.responstable {
+  margin: 1em 0;
+  width: 100%;
+  overflow: hidden;
+  background: #FFF;
+  color: #024457;
+  border-radius: 10px;
+  border: 1px solid #167F92;
+}
+.responstable tr {
+  border: 1px solid #D9E4E6;
+}
+.responstable tr:nth-child(odd) {
+  background-color: #EAF3F3;
+}
+.responstable th {
+  display: none;
+  border: 1px solid #FFF;
+  background-color: #167F92;
+  color: #FFF;
+  padding: 1em;
+}
+.responstable th:first-child {
+  display: table-cell;
+  text-align: center;
+}
+.responstable th:nth-child(2) {
+  display: table-cell;
+}
+.responstable th:nth-child(2) span {
+  display: none;
+}
+.responstable th:nth-child(2):after {
+  content: attr(data-th);
+}
+@media (min-width: 480px) {
+  .responstable th:nth-child(2) span {
+    display: block;
+  }
+  .responstable th:nth-child(2):after {
+    display: none;
+  }
+}
+.responstable td {
+  display: block;
+  word-wrap: break-word;
+  max-width: 7em;
+}
+.responstable td:first-child {
+  display: table-cell;
+  text-align: center;
+  border-right: 1px solid #D9E4E6;
+}
+@media (min-width: 480px) {
+  .responstable td {
+    border: 1px solid #D9E4E6;
+  }
+}
+.responstable th, .responstable td {
+  text-align: left;
+  margin: .5em 1em;
+}
+@media (min-width: 480px) {
+  .responstable th, .responstable td {
+    display: table-cell;
+    padding: 1em;
+  }
+}
+
+body {
+  padding: 0 2em;
+  font-family: Arial, sans-serif;
+  color: #024457;
+  background: #f2f2f2;
+}
+
+h1 {
+  font-family: Verdana;
+  font-weight: normal;
+  color: #024457;
+}
+h1 span {
+  color: #167F92;
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'PT Sans', Arial, Verdana;
+  background-color: #eee;
+}
+h1 {
+  text-align: center;
+  font-size: 48px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #222;
+}
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 120px;
+  margin: auto;
+  position: relative;
+  background-color: #2c3e50;
+  z-index: 7;
+}
+.menu li {
+  float: left;
+  width: 25%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.menu a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  font-size: 18px;
+  z-index: 9;
+}
+a.active {
+  background-color: #e74c3c;
+  pointer-events: none;
+}
+li.slider {
+  width: 25%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #e74c3c;
+  z-index: 8;
+  -webkit-transition: left 0.4s, background-color 0.4s;
+  transition: left 0.4s, background-color 0.4s;
+}
+
+/* A simple, css only, (some-what) responsive menu */
+
+body {
+  background: #ccc;
+  font-family: helvetica, arial, serif;
+  font-size: 13px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.wrap {
+  display: inline-block;
+  -webkit-box-shadow: 0 0 70px #fff;
+  -moz-box-shadow: 0 0 70px #fff;
+  box-shadow: 0 0 70px #fff;
+  margin-top: 40px;
+}
+
+
+/* a little "umph" */
+
+.decor {
+  background: #6EAF8D;
+  background: -webkit-linear-gradient(left, #CDEBDB 50%, #6EAF8D 50%);
+  background: -moz-linear-gradient(left, #CDEBDB 50%, #6EAF8D 50%);
+  background: -o-linear-gradient(left, #CDEBDB 50%, #6EAF8D 50%);
+  background: linear-gradient(left, white 50%, #6EAF8D 50%);
+  background-size: 50px 25%;
+  ;
+  padding: 2px;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+
+ul {
+  list-style: none;
+  position: relative;
+  text-align: left;
+}
+
+li {
+  float: left;
+}
+
+
+/* clear'n floats */
+
+
+
+/* A simple, css only, (some-what) responsive menu */
+
+body {
+  background: #ccc;
+  font-family: helvetica, arial, serif;
+  font-size: 13px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.wrap {
+  display: inline-block;
+  -webkit-box-shadow: 0 0 70px #fff;
+  -moz-box-shadow: 0 0 70px #fff;
+  box-shadow: 0 0 70px #fff;
+  margin-top: 40px;
+}
+
+
+/* a little "umph" */
+
+.decor {
+  background: #6EAF8D;
+  background: -webkit-linear-gradient(left, #CDEBDB 50%, #6EAF8D 50%);
+  background: -moz-linear-gradient(left, #CDEBDB 50%, #6EAF8D 50%);
+  background: -o-linear-gradient(left, #CDEBDB 50%, #6EAF8D 50%);
+  background: linear-gradient(left, white 50%, #6EAF8D 50%);
+  background-size: 50px 25%;
+  ;
+  padding: 2px;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+
+ul {
+  list-style: none;
+  position: relative;
+  text-align: left;
+}
+
+li {
+  float: left;
+}
+
+
+/* clear'n floats */
+
+ul:after {
+  clear: both;
+}
+
+ul:before,
+ul:after {
+  content: " ";
+  display: table;
+}
+
+nav {
+  position: relative;
+  background: #2B2B2B;
+  background-image: -webkit-linear-gradient(bottom, #2B2B2B 7%, #333333 100%);
+  background-image: -moz-linear-gradient(bottom, #2B2B2B 7%, #333333 100%);
+  background-image: -o-linear-gradient(bottom, #2B2B2B 7%, #333333 100%);
+  background-image: linear-gradient(bottom, #2B2B2B 7%, #333333 100%);
+  text-align: center;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 1px #0E0E0E;
+  -webkit-box-shadow: 2px 2px 3px #888;
+  -moz-box-shadow: 2px 2px 3px #888;
+  box-shadow: 2px 2px 3px #888;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+
+/* prime */
+
+ul.primary li a {
+  display: block;
+  padding: 20px 30px;
+  border-right: 1px solid #3D3D3D;
+}
+
+ul.primary li:last-child a {
+  border-right: none;
+}
+
+ul.primary li a:hover {
+  color: #000;
+}
+
+
+/* subs */
+
+ul.sub {
+  position: absolute;
+  z-index: 200;
+  box-shadow: 2px 2px 0 #BEBEBE;
+  width: 35%;
+  display: none;
+}
+
+ul.sub li {
+  float: none;
+  margin: 0;
+}
+
+ul.sub li a {
+  border-bottom: 1px dotted #ccc;
+  border-right: none;
+  color: #000;
+  padding: 15px 30px;
+}
+
+ul.sub li:last-child a {
+  border-bottom: none;
+}
+
+ul.sub li a:hover {
+  color: #000;
+  background: #eeeeee;
+}
+
+
+/* sub display*/
+
+ul.primary li:hover ul {
+  display: block;
+  background: #fff;
+}
+
+
+/* keeps the tab background white */
+
+ul.primary li:hover a {
+  background: #fff;
+  color: #666;
+  text-shadow: none;
+}
+
+ul.primary li:hover > a {
+  color: #000;
+}
+
+@media only screen and (max-width: 600px) {
+  .decor {
+    padding: 3px;
+  }
+  .wrap {
+    width: 100%;
+    margin-top: 0px;
+  }
+  li {
+    float: none;
+  }
+  ul.primary li:hover a {
+    background: none;
+    color: #8B8B8B;
+    text-shadow: 1px 1px #000;
+  }
+  ul.primary li:hover ul {
+    display: block;
+    background: #272727;
+    color: #fff;
+  }
+  ul.sub {
+    display: block;
+    position: static;
+    box-shadow: none;
+    width: 100%;
+  }
+  ul.sub li a {
+    background: #272727;
+    border: none;
+    color: #8B8B8B;
+  }
+  ul.sub li a:hover {
+    color: #ccc;
+    background: none;
+  }
+}
